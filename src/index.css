@@ -1,0 +1,244 @@
+@import "tailwindcss";
+
+/* ─── Dark theme (default) ─────────────────────────────────────────────────── */
+:root, [data-theme="dark"] {
+  --bg-base:       #08080a;
+  --bg-surface:    #0d0d12;
+  --bg-elevated:   #111118;
+  --bg-subtle:     #0a0a10;
+  --bg-overlay:    #131320;
+  --bg-hover:      rgba(255,255,255,0.025);
+  --bg-selected:   rgba(99,217,255,0.06);
+
+  --border-base:   #1e1e28;
+  --border-subtle: #1a1a24;
+  --border-faint:  #141420;
+  --border-muted:  #0f0f18;
+
+  --text-primary:   #e4e4e7;
+  --text-secondary: #a1a1aa;
+  --text-tertiary:  #71717a;
+  --text-muted:     #52525b;
+  --text-faint:     #3f3f52;
+  --text-ghost:     #2a2a36;
+  --text-whisper:   #1e1e28;
+
+  --accent-cyan:    #63d9ff;
+  --accent-purple:  #c084fc;
+  --accent-green:   #34d399;
+  --accent-amber:   #fbbf24;
+  --accent-orange:  #f97316;
+  --accent-red:     #ef4444;
+
+  --accent-cyan-bg:    rgba(99,217,255,0.08);
+  --accent-cyan-border:rgba(99,217,255,0.2);
+  --accent-orange-bg:  rgba(249,115,22,0.08);
+  --accent-orange-border: rgba(249,115,22,0.2);
+  --accent-red-bg:     rgba(239,68,68,0.08);
+  --accent-red-border: rgba(239,68,68,0.2);
+  --accent-green-bg:   rgba(52,211,153,0.08);
+  --accent-green-border: rgba(52,211,153,0.2);
+
+  --shadow-card:  0 1px 3px rgba(0,0,0,0.5);
+  --shadow-panel: 0 4px 16px rgba(0,0,0,0.4);
+
+  --grid-line:  rgba(255,255,255,0.018);
+  --logo-glow:  rgba(99,217,255,0.25);
+
+  --scrollbar-track:  transparent;
+  --scrollbar-thumb:  #2a2a30;
+  --scrollbar-hover:  #3f3f4a;
+
+  --bar-track: #1a1a22;
+
+  --chart-bg:        transparent;
+  --chart-split:     #1a1a24;
+  --chart-label:     #3f3f52;
+  --chart-border:    #2a2a36;
+  --chart-tooltip-bg:#131320;
+  --chart-tooltip-fg:#a1a1aa;
+
+  --tab-active-border: #63d9ff;
+  --tab-active-text:   #e4e4e7;
+  --tab-inactive-text: #2a2a36;
+
+  --header-bg: rgba(8,8,10,0.93);
+  --header-border: #1a1a24;
+  --header-stat: #52525b;
+  --header-dot:  #1e1e28;
+}
+
+/* ─── Light theme ──────────────────────────────────────────────────────────── */
+[data-theme="light"] {
+  --bg-base:       #f8f8fc;
+  --bg-surface:    #ffffff;
+  --bg-elevated:   #f2f2f8;
+  --bg-subtle:     #fafafa;
+  --bg-overlay:    #ffffff;
+  --bg-hover:      rgba(0,0,0,0.035);
+  --bg-selected:   rgba(79,130,246,0.08);
+
+  --border-base:   #e4e4ec;
+  --border-subtle: #ebebf2;
+  --border-faint:  #f0f0f6;
+  --border-muted:  #dcdce8;
+
+  --text-primary:   #111118;
+  --text-secondary: #374151;
+  --text-tertiary:  #6b7280;
+  --text-muted:     #9ca3af;
+  --text-faint:     #9ca3af;
+  --text-ghost:     #c4c4cc;
+  --text-whisper:   #d1d5db;
+
+  --accent-cyan:    #0284c7;
+  --accent-purple:  #7c3aed;
+  --accent-green:   #059669;
+  --accent-amber:   #d97706;
+  --accent-orange:  #ea580c;
+  --accent-red:     #dc2626;
+
+  --accent-cyan-bg:    rgba(2,132,199,0.07);
+  --accent-cyan-border:rgba(2,132,199,0.2);
+  --accent-orange-bg:  rgba(234,88,12,0.07);
+  --accent-orange-border: rgba(234,88,12,0.2);
+  --accent-red-bg:     rgba(220,38,38,0.07);
+  --accent-red-border: rgba(220,38,38,0.2);
+  --accent-green-bg:   rgba(5,150,105,0.07);
+  --accent-green-border: rgba(5,150,105,0.2);
+
+  --shadow-card:  0 1px 4px rgba(0,0,0,0.08), 0 0 0 1px rgba(0,0,0,0.04);
+  --shadow-panel: 0 4px 16px rgba(0,0,0,0.1);
+
+  --grid-line:  rgba(0,0,0,0.04);
+  --logo-glow:  rgba(2,132,199,0.18);
+
+  --scrollbar-track:  transparent;
+  --scrollbar-thumb:  #d1d5db;
+  --scrollbar-hover:  #9ca3af;
+
+  --bar-track: #e5e7eb;
+
+  --chart-bg:        transparent;
+  --chart-split:     #e5e7eb;
+  --chart-label:     #9ca3af;
+  --chart-border:    #e4e4ec;
+  --chart-tooltip-bg:#ffffff;
+  --chart-tooltip-fg:#374151;
+
+  --tab-active-border: #0284c7;
+  --tab-active-text:   #111118;
+  --tab-inactive-text: #9ca3af;
+
+  --header-bg: rgba(248,248,252,0.95);
+  --header-border: #e4e4ec;
+  --header-stat: #6b7280;
+  --header-dot:  #d1d5db;
+}
+
+/* ─── Base resets ──────────────────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body, #root {
+  height: 100%;
+  background: var(--bg-base);
+  font-family: 'JetBrains Mono', monospace;
+  color: var(--text-primary);
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+::-webkit-scrollbar { width: 4px; height: 4px; }
+::-webkit-scrollbar-track { background: var(--scrollbar-track); }
+::-webkit-scrollbar-thumb { background: var(--scrollbar-thumb); border-radius: 2px; }
+::-webkit-scrollbar-thumb:hover { background: var(--scrollbar-hover); }
+
+/* ─── Animations ──────────────────────────────────────────────────────────── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@keyframes slideRight {
+  from { opacity: 0; transform: translateX(-8px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+@keyframes bar-fill {
+  from { width: 0%; }
+}
+
+.anim-fade-up   { animation: fadeUp   0.35s cubic-bezier(0.16,1,0.3,1) both; }
+.anim-fade-in   { animation: fadeIn   0.25s ease both; }
+.anim-slide-r   { animation: slideRight 0.25s cubic-bezier(0.16,1,0.3,1) both; }
+
+/* ─── Row states ──────────────────────────────────────────────────────────── */
+.probe-row {
+  transition: background 0.1s;
+  cursor: pointer;
+}
+.probe-row:hover {
+  background: var(--bg-hover) !important;
+}
+.probe-row.sel {
+  background: var(--bg-selected) !important;
+  border-left-color: var(--accent-cyan) !important;
+}
+
+/* ─── Tabs ────────────────────────────────────────────────────────────────── */
+.probe-tab {
+  cursor: pointer;
+  transition: color 0.15s, border-color 0.15s;
+  border-bottom: 2px solid transparent;
+}
+.probe-tab:hover {
+  color: var(--text-tertiary) !important;
+}
+.probe-tab.active {
+  color: var(--tab-active-text) !important;
+  border-bottom-color: var(--tab-active-border) !important;
+}
+
+/* ─── Sort headers ────────────────────────────────────────────────────────── */
+.sortable:hover {
+  color: var(--text-secondary) !important;
+  cursor: pointer;
+}
+
+/* ─── Inputs ──────────────────────────────────────────────────────────────── */
+input:focus, textarea:focus {
+  outline: none;
+  border-color: var(--accent-cyan) !important;
+}
+
+/* ─── Bars ────────────────────────────────────────────────────────────────── */
+.bar-animated { animation: bar-fill 0.6s cubic-bezier(0.16,1,0.3,1) both; }
+
+/* ─── Tab badge ───────────────────────────────────────────────────────────── */
+.tab-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 16px;
+  height: 16px;
+  padding: 0 4px;
+  border-radius: 3px;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0;
+}
+
+/* ─── Theme transition ────────────────────────────────────────────────────── */
+* {
+  transition:
+    background-color 0.18s ease,
+    border-color     0.18s ease,
+    color            0.1s  ease,
+    box-shadow       0.18s ease;
+}
+/* Disable transition on SVG paths / animations so they stay crisp */
+svg *, canvas { transition: none !important; }
