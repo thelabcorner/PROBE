@@ -52,7 +52,7 @@ jobs:
         working-directory: source
         run: |
           node --check plugins/opencode-go/plugin.js
-          bun test plugins/opencode-go/plugin.test.js
+          bunx vitest run plugins/opencode-go/plugin.test.js
 
       - name: Build Windows MSI
         working-directory: source
